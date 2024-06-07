@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-field">
+        <textarea id="inputText" placeholder="Enter your new Todo"></textarea>
+        <i class="uil uil-notes note-icon"></i>
+    </div>
+    <ul class="todolists">
+        <li class="list pending" onclick="handleStatus(this)">
+            <input type="Checkbox" />
+            <span class="task">Take a deep breath (once daily)</span>
+            <i class="uil uil-trash" onclick="deleteTask(event)"></i>
+        </li>
+        <li class="list">
+            <input type="Checkbox" />
+            <span class="task">Set up your to do list to view it by mode as well as due date</span>
+            <i class="uil uil-trash" onclick="deleteTask(event)"></i>
+        </li>
+    </ul>
+    <div class="pending-tasks">
+        <span>You have <span class="pending-num"> no </span> tasks pending.</span>
+        <button class="clear-button" onclick="clearButton()">Clear All</button>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
